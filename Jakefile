@@ -89,6 +89,7 @@ task('build', ['clean', 'hint', 'update-version'], function () {
 
         packager.generate("windows8",commitId,true);
         packager.generate("blackberry",commitId);
+        packager.generate("blackberry10",commitId);
         packager.generate("firefoxos",commitId);
         packager.generate("ios",commitId);
         packager.generate("windowsphone",commitId,true);
@@ -112,7 +113,6 @@ task('update-version', ['set-cwd'], function() {
         "lib/bada/plugin/bada/device.js":/(me\.cordova\s=\s").+(")/,
         "lib/tizen/plugin/tizen/Device.js":/(this\.cordova\s=\s").+(")/,
         "lib/firefoxos/plugin/firefoxos/device.js":/(this\.cordova\s=\s").+(")/,
-        "lib/blackberry/plugin/qnx/device.js":/(cordova:\s").+(")/,
         "lib/blackberry/plugin/air/device.js":/(cordova:\s").+(")/,
         "lib/windows8/plugin/windows8/DeviceProxy.js":/(cordova:\s").+(")/
     };
